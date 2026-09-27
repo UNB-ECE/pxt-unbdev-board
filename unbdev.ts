@@ -25,12 +25,12 @@
  * `Control` carries the student-facing Click socket blocks ported from
  * Brilliant Labs' bBoard_Control; see UNB-ECE/unblabs-platform#87.
  *
- * It sits below the Advanced row rather than above it, but stays on screen
- * when Advanced is collapsed (`advancedAlwaysShown`), and it keeps its own
- * chevron and click-to-shut because it declares named feature rows.
+ * It is a normal category, parallel to the Advanced row rather than inside
+ * it, and it keeps its own chevron and click-to-shut because it declares
+ * named feature rows.
  */
 //% color=#9E4894 icon="\uf2db" block="UNBdev.board"
-//% weight=98 advanced=true advancedAlwaysShown=true subcategories='["Microphone", "BLiXel", "Wi-Fi", "Motors", "Control"]'
+//% weight=98 subcategories='["Microphone", "BLiXel", "Wi-Fi", "Motors", "Control"]'
 //% subcategoryIcons='{"Microphone":"\uf130","BLiXel":"\uf110","Wi-Fi":"\uf1eb","Motors":"\uf085","Control":"\uf2db"}'
 namespace UNBDev {
     // Keep namespace metadata available without exposing an extra block.
