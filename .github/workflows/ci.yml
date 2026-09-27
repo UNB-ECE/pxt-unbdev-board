@@ -30,6 +30,24 @@ jobs:
         with:
           node-version: 20
 
+      # A source file that exists but is not named in pxt.json never reaches the
+      # compiler: it contributes no blocks and `pxt test` passes clean. That is
+      # how the Control blocks shipped absent while this workflow was green. Run
+      # this first so the log names the file, rather than leaving a missing
+      # feature to be discovered later in an editor.
+      - name: Check every source file is registered in pxt.json
+        run: |
+          set -euo pipefail
+          registered="$(python3 -c "import json;d=json.load(open('pxt.json'));print(chr(10).join(d.get('files',[])+d.get('testFiles',[])))" | sort)"
+          present="$(git ls-files '*.ts' | grep -v / | sort)"
+          missing="$(comm -23 <(echo "$present") <(echo "$registered"))"
+          if [ -n "$missing" ]; then
+            echo "::error::source file(s) present but not registered in pxt.json:"
+            echo "$missing"
+            exit 1
+          fi
+          echo "ok: $(echo "$present" | wc -l) source file(s), all registered"
+
       - name: Install PXT CLI
         run: npm install
 
