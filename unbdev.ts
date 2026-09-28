@@ -25,12 +25,12 @@
  * `Control` carries the student-facing Click socket blocks ported from
  * Brilliant Labs' bBoard_Control; see UNB-ECE/unblabs-platform#87.
  *
- * It appears inside the editor's Advanced section, like Brilliant Labs'
- * b.Board category. Its own chevron expands or collapses the named feature
- * rows without affecting the rest of Advanced.
+ * It appears between the editor's Extensions and Advanced rows. Its own
+ * chevron expands or collapses the named feature rows without affecting the
+ * rest of the toolbox.
  */
 //% color=#9E4894 icon="\uf2db" block="UNBdev.board"
-//% weight=98 advanced=true subcategories='["Microphone", "BLiXel", "Wi-Fi", "Motors", "Control"]'
+//% weight=98 subcategories='["Microphone", "BLiXel", "Wi-Fi", "Motors", "Control"]'
 //% subcategoryIcons='{"Microphone":"\uf130","BLiXel":"\uf110","Wi-Fi":"\uf1eb","Motors":"\uf085","Control":"\uf2db"}'
 namespace UNBDev {
     // Keep namespace metadata available without exposing an extra block.
