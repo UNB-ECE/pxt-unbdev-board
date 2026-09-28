@@ -31,13 +31,20 @@ UNBdev.board controller firmware 2.17. BLiXel-specific commands added by issue
 `#41` still require physical verification and must not yet be described as a
 stable UNBdev.board firmware contract.
 
+The feature categories below describe implemented extension APIs, not a physical
+support claim. Apart from the controller firmware-version transaction, each
+peripheral operation remains pending hardware validation against an identified
+board and firmware revision. Do not use the extension instructions as an
+electrical, wiring, or motor-safety authorization.
+
 ## BLiXel blocks
 
 Import the extension, then open **UNBdev.board** and expand **BLiXel**. The public
 blocks set all five integrated RGB BLiXels, set individual pixels, clear the
 strip, adjust brightness, shift or rotate colours, show a five-step bar graph,
-and construct RGB or HSL colours. Operations update the physical display
-immediately; a separate `show` block is not required.
+and construct RGB or HSL colours. Operations send a display request immediately;
+a separate `show` block is not required. The resulting physical display behavior
+remains unverified pending the BLiXel validation listed below.
 
 Bar graphs clamp values to the selected range and light zero or five BLiXels
 for values below or above the range. When minimum and maximum are equal, the

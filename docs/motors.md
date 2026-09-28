@@ -1,20 +1,26 @@
 # UNBdev.board motors
 
-The **Motors** row inside **UNBdev.board** under **Advanced** controls the two motor-driver outputs on
-the integrated board. Use an approved external motor supply and the polarity and
-voltage range documented for the physical UNBdev.board; USB power alone is not
-an approved motor-power source.
+## Physical validation and safety boundary
+
+The **Motors** row inside **UNBdev.board** under **Advanced** exposes implemented
+extension APIs that are not yet physically validated on UNBdev.board. Do not attach
+or operate motors based on this document. A supported motor workflow first requires
+a hardware contract and physical test record for the board revision, controller
+firmware, external supply voltage and current limits, wiring and polarity, driver
+limits, stop behavior, and fault handling. USB power alone is not an approved
+motor-power source.
 
 ## Examples
 
-Run both motors forward at half speed, then stop:
+The following are API examples only; they are not approval to operate physical
+hardware. Run both motors forward at half speed, then stop:
 
 ```typescript
 UNBdevMotor.enable(UNBdevMotor.State.Enabled)
 UNBdevMotor.runBothFor(50, 1000)
 ```
 
-Turn in place until the program stops the motors:
+This example requests a turn in place until the program stops the motors:
 
 ```typescript
 UNBdevMotor.setSpeed(UNBdevMotor.Motor.Left, -40)
