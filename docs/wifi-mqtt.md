@@ -19,7 +19,7 @@ ESP32 AT firmware identity/version: NOT YET PROVIDED
 The `Wi-Fi firmware version` block and `firmwareVersion()` API issue this
 read-only query without exposing network credentials.
 
-## Supported behavior
+## Implemented behavior pending physical acceptance
 
 - Integrated ESP32 through the shared controller BuiltIn UART and UART event.
 - ESP-AT station mode, access-point join, status, disconnect, and restart.

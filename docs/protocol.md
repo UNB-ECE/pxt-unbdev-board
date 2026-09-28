@@ -13,8 +13,12 @@ verification remains required before the protocol can be declared stable.
 
 UNBdev.board is an integrated device consisting of a micro:bit soldered to a
 b.Board-derived baseboard. The micro:bit runs the student MakeCode program. A
-separate controller on the baseboard runs UNBdev.board firmware and handles
-base-board peripherals and the two mikroBUS-compatible Click sockets.
+separate controller on the baseboard is assumed by the compatibility source to run
+UNBdev.board firmware and handle base-board peripherals and two routed
+mikroBUS-compatible Click sockets (A and B). That topology is provisional: the
+firmware-version transaction is the only physically verified controller operation,
+so controller count, socket count and labelling, routing, pins, and electrical
+constraints require confirmation in the hardware contract.
 
 ## Controller transport
 
