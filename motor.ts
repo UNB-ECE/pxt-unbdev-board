@@ -68,6 +68,7 @@ namespace UNBdevMotor {
 
     /** Enable or disable the integrated motor driver. */
     //% block="motor driver $state"
+    //% help=github:unbdev-board/docs/motors
     //% blockNamespace=UNBDev subcategory="Motors"
     //% weight=100
     export function enable(state: State): void {
@@ -85,6 +86,7 @@ namespace UNBdevMotor {
     //% block="run $motor motor $direction at $speed %"
     //% speed.min=0 speed.max=100 speed.defl=50
     //% speed.shadow="speedPicker"
+    //% help=github:unbdev-board/docs/motors
     //% blockNamespace=UNBDev subcategory="Motors"
     //% weight=95
     export function run(motor: Motor, direction: Direction, speed: number): void {
@@ -95,6 +97,7 @@ namespace UNBdevMotor {
     //% block="set $motor motor speed to $speed %"
     //% speed.min=-100 speed.max=100 speed.defl=50
     //% speed.shadow="speedPicker"
+    //% help=github:unbdev-board/docs/motors
     //% blockNamespace=UNBDev subcategory="Motors"
     //% weight=90
     export function setSpeed(motor: Motor, speed: number): void {
@@ -108,6 +111,7 @@ namespace UNBdevMotor {
     //% block="set both motor speeds to $speed %"
     //% speed.min=-100 speed.max=100 speed.defl=50
     //% speed.shadow="speedPicker"
+    //% help=github:unbdev-board/docs/motors
     //% blockNamespace=UNBDev subcategory="Motors"
     //% weight=85
     export function setBothSpeeds(speed: number): void {
@@ -121,6 +125,7 @@ namespace UNBdevMotor {
     //% speed.shadow="speedPicker"
     //% duration.min=0 duration.defl=1000
     //% duration.shadow="timePicker"
+    //% help=github:unbdev-board/docs/motors
     //% blockNamespace=UNBDev subcategory="Motors"
     //% weight=80
     export function runFor(motor: Motor, speed: number, duration: number): void {
@@ -135,6 +140,7 @@ namespace UNBdevMotor {
     //% speed.shadow="speedPicker"
     //% duration.min=0 duration.defl=1000
     //% duration.shadow="timePicker"
+    //% help=github:unbdev-board/docs/motors
     //% blockNamespace=UNBDev subcategory="Motors"
     //% weight=75
     export function runBothFor(speed: number, duration: number): void {
@@ -145,6 +151,7 @@ namespace UNBdevMotor {
 
     /** Brake one motor. */
     //% block="stop $motor motor"
+    //% help=github:unbdev-board/docs/motors
     //% blockNamespace=UNBDev subcategory="Motors"
     //% weight=70
     export function stop(motor: Motor): void {
@@ -153,6 +160,7 @@ namespace UNBdevMotor {
 
     /** Brake both motors. */
     //% block="stop all motors"
+    //% help=github:unbdev-board/docs/motors
     //% blockNamespace=UNBDev subcategory="Motors"
     //% weight=65
     export function stopAll(): void {

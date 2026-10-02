@@ -13,7 +13,10 @@
         "click.ts",
         "microphone.ts",
         "motor.ts",
-        "wifi.ts"
+        "wifi.ts",
+        "docs/wifi-mqtt.md",
+        "docs/motors.md",
+        "docs/microphone.md"
     ],
     "testFiles": [
         "test.ts"
