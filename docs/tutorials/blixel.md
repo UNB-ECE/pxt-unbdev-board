@@ -219,7 +219,7 @@ With the lights off, change the on-start brightness from **20% to 40%**, downloa
 
 ## Finish and explain
 
-Keep the completed project at 20% brightness. Explain why shift can lose a colour but rotate wraps it, why 50/100 lights three of five pixels, and how RGB, HSL, and named colours feed the same setting block. Compilation and the micro:bit simulator check the program flow; only your recorded board test verifies the BLiXels. Click **Finish** to keep your project.
+Keep the completed project at 20% brightness. Explain why shift can lose a colour but rotate wraps it, why 50/100 lights three of five pixels, and how RGB, HSL, and named colours feed the same setting block. Compilation and the micro:bit simulator check the program flow; only your recorded board test verifies the BLiXels. Click **Done** to keep your project.
 
 ```package
 unbdev-board=github:UNB-ECE/pxt-unbdev-board#9c599beeb48972ae5d9f8108f9af66b320add00b
