@@ -128,6 +128,7 @@ namespace UNBdevClick {
     //% block="UNBdev.board write pin $pin to $value on Click $socket"
     //% blockNamespace=UNBDev subcategory="Control" group="Pins"
     //% weight=100
+    //% help=github:unbdev-board/docs/reference/control/write-pin
     export function writePin(pin: ClickPin, value: number, socket: Socket): void {
         UNBdevBoard.digitalWrite(asPin(pin), value ? 1 : 0,
             UNBdevBoard.Board.Integrated, portFor(socket))
@@ -137,6 +138,7 @@ namespace UNBdevClick {
     //% block="UNBdev.board digital read pin $pin on Click $socket"
     //% blockNamespace=UNBDev subcategory="Control" group="Pins"
     //% weight=95
+    //% help=github:unbdev-board/docs/reference/control/digital-read-pin
     export function digitalReadPin(pin: ClickPin, socket: Socket): number {
         return UNBdevBoard.digitalRead(asPin(pin),
             UNBdevBoard.Board.Integrated, portFor(socket))
@@ -146,6 +148,7 @@ namespace UNBdevClick {
     //% block="UNBdev.board read analog pin $pin on Click $socket"
     //% blockNamespace=UNBDev subcategory="Control" group="Pins"
     //% weight=90
+    //% help=github:unbdev-board/docs/reference/control/analog-read-pin
     export function analogReadPin(pin: AnalogSignal, socket: Socket): number {
         return UNBdevBoard.analogRead(asAnalogPin(pin),
             UNBdevBoard.Board.Integrated, portFor(socket))
@@ -155,6 +158,7 @@ namespace UNBdevClick {
     //% block="UNBdev.board set pin $pin to $mode on Click $socket"
     //% blockNamespace=UNBDev subcategory="Control" group="Pins"
     //% weight=85
+    //% help=github:unbdev-board/docs/reference/control/set-pin-mode
     export function setPinMode(pin: ClickPin, mode: PinMode, socket: Socket): void {
         UNBdevBoard.setPinDirection(asPin(pin), mode as number as UNBdevBoard.PinDirection,
             UNBdevBoard.Board.Integrated, portFor(socket))
@@ -164,6 +168,7 @@ namespace UNBdevClick {
     //% block="UNBdev.board set pin $pin pull $pull on Click $socket"
     //% blockNamespace=UNBDev subcategory="Control" group="Pins"
     //% weight=80
+    //% help=github:unbdev-board/docs/reference/control/set-pin-pull
     export function setPinPull(pin: ClickPin, pull: PinPull, socket: Socket): void {
         UNBdevBoard.setPull(asPin(pin), pull as number as UNBdevBoard.PullDirection,
             UNBdevBoard.Board.Integrated, portFor(socket))
@@ -174,6 +179,7 @@ namespace UNBdevClick {
     //% blockNamespace=UNBDev subcategory="Control" group="PWM"
     //% percent.defl=50
     //% weight=70
+    //% help=github:unbdev-board/docs/reference/control/set-pwm-duty
     export function setPwmDuty(pin: PwmSignal, percent: number, socket: Socket): void {
         UNBdevBoard.setPwmDuty(asPwmPin(pin), percent,
             UNBdevBoard.Board.Integrated, portFor(socket))
@@ -184,6 +190,7 @@ namespace UNBdevClick {
     //% blockNamespace=UNBDev subcategory="Control" group="PWM"
     //% frequency.defl=1000
     //% weight=65
+    //% help=github:unbdev-board/docs/reference/control/set-pwm-frequency
     export function setPwmFrequency(pin: PwmSignal, frequency: number, socket: Socket): void {
         UNBdevBoard.setPwmFrequency(asPwmPin(pin), frequency,
             UNBdevBoard.Board.Integrated, portFor(socket))
@@ -193,6 +200,7 @@ namespace UNBdevClick {
     //% block="UNBdev.board send string $text on Click $socket"
     //% blockNamespace=UNBDev subcategory="Control" group="UART"
     //% weight=60
+    //% help=github:unbdev-board/docs/reference/control/uart-send-string
     export function uartSendString(text: string, socket: Socket): void {
         UNBdevBoard.uartWriteString(text,
             UNBdevBoard.Board.Integrated, portFor(socket))
@@ -202,6 +210,7 @@ namespace UNBdevClick {
     //% block="UNBdev.board read string on Click $socket"
     //% blockNamespace=UNBDev subcategory="Control" group="UART"
     //% weight=55
+    //% help=github:unbdev-board/docs/reference/control/uart-read-string
     export function uartReadString(socket: Socket): string {
         return UNBdevBoard.uartReadString(
             UNBdevBoard.Board.Integrated, portFor(socket))
@@ -211,6 +220,7 @@ namespace UNBdevClick {
     //% block="UNBdev.board is UART data available on Click $socket"
     //% blockNamespace=UNBDev subcategory="Control" group="UART"
     //% weight=50
+    //% help=github:unbdev-board/docs/reference/control/uart-data-available
     export function uartDataAvailable(socket: Socket): boolean {
         return UNBdevBoard.uartAvailable(
             UNBdevBoard.Board.Integrated, portFor(socket)) > 0
@@ -221,6 +231,7 @@ namespace UNBdevClick {
     //% blockNamespace=UNBDev subcategory="Control" group="UART"
     //% baud.defl=115200
     //% weight=45
+    //% help=github:unbdev-board/docs/reference/control/uart-set-baud
     export function uartSetBaud(baud: number, socket: Socket): void {
         UNBdevBoard.uartSetBaud(baud,
             UNBdevBoard.Board.Integrated, portFor(socket))

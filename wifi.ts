@@ -175,8 +175,8 @@ namespace UNBdevBoardWiFi {
     /** Connect using credentials supplied by this MakeCode project. */
     //% blockId=unb_wifi_connect
     //% block="UNBdev.board connect to Wi-Fi $ssid with password $password"
-    //% help=github:unbdev-board/docs/wifi-mqtt
     //% blockNamespace=UNBDev subcategory="Wi-Fi" weight=100
+    //% help=github:unbdev-board/docs/reference/wifi/connect-wi-fi
     export function connectWiFi(ssid: string, password: string): boolean {
         if (!valid(ssid) || !valid(password) || ssid.indexOf("\"") >= 0 ||
             password.indexOf("\"") >= 0 || ssid.indexOf("\\") >= 0 ||
@@ -195,8 +195,8 @@ namespace UNBdevBoardWiFi {
 
     //% blockId=unb_wifi_is_connected
     //% block="UNBdev.board Wi-Fi is connected"
-    //% help=github:unbdev-board/docs/wifi-mqtt
     //% blockNamespace=UNBDev subcategory="Wi-Fi" weight=90
+    //% help=github:unbdev-board/docs/reference/wifi/is-connected
     export function isConnected(): boolean {
         if (!command("AT+CIPSTATUS", "OK", TIMEOUT)) return false
         const marker = response.indexOf("STATUS:")
@@ -208,8 +208,8 @@ namespace UNBdevBoardWiFi {
 
     //% blockId=unb_wifi_disconnect
     //% block="UNBdev.board disconnect Wi-Fi"
-    //% help=github:unbdev-board/docs/wifi-mqtt
     //% blockNamespace=UNBDev subcategory="Wi-Fi" weight=80
+    //% help=github:unbdev-board/docs/reference/wifi/disconnect
     export function disconnect(): boolean {
         connected = false
         return command("AT+CWQAP", "OK", TIMEOUT)
@@ -217,8 +217,8 @@ namespace UNBdevBoardWiFi {
 
     //% blockId=unb_wifi_restart
     //% block="UNBdev.board restart Wi-Fi"
-    //% help=github:unbdev-board/docs/wifi-mqtt
     //% blockNamespace=UNBDev subcategory="Wi-Fi" weight=70
+    //% help=github:unbdev-board/docs/reference/wifi/restart
     export function restart(): boolean {
         connected = false
         const result = command("AT+RST", "ready", 10000)
@@ -229,8 +229,8 @@ namespace UNBdevBoardWiFi {
     /** Query the ESP32 AT firmware identification text (`AT+GMR`). */
     //% blockId=unb_wifi_firmware_version
     //% block="UNBdev.board Wi-Fi firmware version"
-    //% help=github:unbdev-board/docs/wifi-mqtt
     //% blockNamespace=UNBDev subcategory="Wi-Fi" weight=60
+    //% help=github:unbdev-board/docs/reference/wifi/firmware-version
     export function firmwareVersion(): string {
         if (!command("AT+GMR", "OK", 3000)) return ""
         let value = response
@@ -246,8 +246,8 @@ namespace UNBdevBoardWiFi {
     /** MQTT 3.1.1 anonymous clean session over TCP port 1883. */
     //% blockId=unb_mqtt_connect
     //% block="UNBdev.board MQTT connect to server $server"
-    //% help=github:unbdev-board/docs/wifi-mqtt
     //% blockNamespace=UNBDev subcategory="Wi-Fi" weight=55
+    //% help=github:unbdev-board/docs/reference/wifi/connect-mqtt
     export function connectMQTT(server: string): boolean {
         if (!valid(server) || server.indexOf("\"") >= 0) return fail(ErrorCode.InvalidArgument)
         if (!isConnected()) return false
@@ -267,8 +267,8 @@ namespace UNBdevBoardWiFi {
 
     //% blockId=unb_mqtt_publish
     //% block="UNBdev.board MQTT publish $data to topic $topic"
-    //% help=github:unbdev-board/docs/wifi-mqtt
     //% blockNamespace=UNBDev subcategory="Wi-Fi" weight=50
+    //% help=github:unbdev-board/docs/reference/wifi/publish
     export function publish(topic: string, data: any): boolean {
         if (!connected) return fail(ErrorCode.NotConnected)
         let value = ""
@@ -289,8 +289,8 @@ namespace UNBdevBoardWiFi {
     //% blockId=unb_mqtt_on_message
     //% block="on UNBdev.board MQTT $type received $value from topic $topic"
     //% draggableParameters=variable blockAllowMultiple=1 afterOnStart=true
-    //% help=github:unbdev-board/docs/wifi-mqtt
     //% blockNamespace=UNBDev subcategory="Wi-Fi" weight=45
+    //% help=github:unbdev-board/docs/reference/wifi/on-message
     export function onMessage(topic: string, type: DataType,
         handler: (value: any) => void): void {
         if (!valid(topic) || !handler) { error = ErrorCode.InvalidArgument; return }
@@ -355,7 +355,7 @@ namespace UNBdevBoardWiFi {
 
     //% blockId=unb_wifi_last_error
     //% block="UNBdev.board Wi-Fi last error"
-    //% help=github:unbdev-board/docs/wifi-mqtt
     //% blockNamespace=UNBDev subcategory="Wi-Fi" weight=40
+    //% help=github:unbdev-board/docs/reference/wifi/last-error
     export function lastError(): ErrorCode { return error }
 }

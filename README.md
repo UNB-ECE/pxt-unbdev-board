@@ -19,9 +19,11 @@ compatible.
 
 ## Block Help
 
-Right-click a Wi-Fi/MQTT, motor, or microphone block and choose **Help** to
-open its feature guide inside the editor. These guides ship with the imported
-extension revision and do not require a hosted reference page.
+Right-click any public **Microphone**, **BLiXel**, **Wi-Fi**, **Motors**, or
+**Control** block and choose **Help** to open its own usage page inside the editor.
+Each page includes the rendered block, JavaScript/Python signatures, parameters,
+and an example. See the [block reference index](docs/reference/README.md).
+These pages ship with the imported extension revision.
 
 ## Current status
 
