@@ -61,7 +61,8 @@
         "docs/reference/control/uart-send-string.md",
         "docs/reference/control/uart-read-string.md",
         "docs/reference/control/uart-data-available.md",
-        "docs/reference/control/uart-set-baud.md"
+        "docs/reference/control/uart-set-baud.md",
+        "docs/tutorials/blixel.md"
     ],
     "testFiles": [
         "test.ts"

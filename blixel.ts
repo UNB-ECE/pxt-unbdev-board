@@ -140,7 +140,7 @@ namespace UNBdevBLiXel {
 
     /** Set BLiXel brightness from 0 to 100 percent. */
     //% blockId=UNBdevBLiXel_set_brightness
-    //% block="set UNBdev.board BLiXel brightness to $percent %"
+    //% block="set UNBdev.board BLiXel brightness to $percent percent"
     //% percent.min=0 percent.max=100 percent.defl=50
     //% blockNamespace=UNBDev subcategory="BLiXel"
     //% weight=70 blockGap=8
