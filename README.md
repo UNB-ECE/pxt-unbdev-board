@@ -17,6 +17,12 @@ throughout. Blocks declared
 TypeScript namespace names remain available so saved JavaScript projects stay
 compatible.
 
+## Block Help
+
+Right-click a Wi-Fi/MQTT, motor, or microphone block and choose **Help** to
+open its feature guide inside the editor. These guides ship with the imported
+extension revision and do not require a hosted reference page.
+
 ## Current status
 
 The repository contains the control and transport foundation from
