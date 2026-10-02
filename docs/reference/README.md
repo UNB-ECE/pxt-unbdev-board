@@ -64,4 +64,3 @@ Hardware examples describe implemented APIs; physical peripheral validation rema
 * [Read Click UART string](control/uart-read-string.md)
 * [Click UART data available](control/uart-data-available.md)
 * [Set Click UART baud](control/uart-set-baud.md)
-
