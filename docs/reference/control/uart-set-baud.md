@@ -13,7 +13,7 @@ UNBdevClick.uartSetBaud(115200, UNBdevClick.Socket.A)
 
 ## Usage notes
 
-The API sends a 32-bit rate value and does not check which rates the hardware supports. This affects the selected Click UART, not micro:bit USB serial.
+The API ignores nonpositive rates and encodes a clock divisor derived from 40000000 / baud in two bytes; it does not check which rates the hardware supports. This affects the selected Click UART, not micro:bit USB serial.
 
 ## Example
 

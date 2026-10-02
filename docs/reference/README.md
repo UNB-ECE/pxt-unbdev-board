@@ -46,7 +46,7 @@ Hardware examples describe implemented APIs; physical peripheral validation rema
 * [Disconnect Wi-Fi](wifi/disconnect.md)
 * [Restart Wi-Fi](wifi/restart.md)
 * [Wi-Fi firmware version](wifi/firmware-version.md)
-* [Connect to MQTT](wifi/connect-m-q-t-t.md)
+* [Connect to MQTT](wifi/connect-mqtt.md)
 * [Publish MQTT message](wifi/publish.md)
 * [On MQTT message](wifi/on-message.md)
 * [Wi-Fi last error](wifi/last-error.md)

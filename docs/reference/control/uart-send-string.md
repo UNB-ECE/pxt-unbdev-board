@@ -8,7 +8,7 @@ UNBdevClick.uartSendString("HELLO", UNBdevClick.Socket.A)
 
 ## Parameters
 
-* **text**: Text to transmit. The transport adds a terminating zero byte, not an automatic line ending.
+* **text**: Text to transmit. Text is encoded as UTF-8; no terminating zero byte or line ending is added.
 * **socket**: Choose Click socket A or B on the integrated UNBdev.board.
 
 ## Usage notes

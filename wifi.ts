@@ -247,7 +247,7 @@ namespace UNBdevBoardWiFi {
     //% blockId=unb_mqtt_connect
     //% block="UNBdev.board MQTT connect to server $server"
     //% blockNamespace=UNBDev subcategory="Wi-Fi" weight=55
-    //% help=github:unbdev-board/docs/reference/wifi/connect-m-q-t-t
+    //% help=github:unbdev-board/docs/reference/wifi/connect-mqtt
     export function connectMQTT(server: string): boolean {
         if (!valid(server) || server.indexOf("\"") >= 0) return fail(ErrorCode.InvalidArgument)
         if (!isConnected()) return false

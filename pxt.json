@@ -47,7 +47,7 @@
         "docs/reference/wifi/disconnect.md",
         "docs/reference/wifi/restart.md",
         "docs/reference/wifi/firmware-version.md",
-        "docs/reference/wifi/connect-m-q-t-t.md",
+        "docs/reference/wifi/connect-mqtt.md",
         "docs/reference/wifi/publish.md",
         "docs/reference/wifi/on-message.md",
         "docs/reference/wifi/last-error.md",

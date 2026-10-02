@@ -12,7 +12,7 @@ UNBdevClick.uartReadString(UNBdevClick.Socket.A)
 
 ## Returns
 
-A string decoded from the controller response up to its terminating zero. This is a current-buffer read, not a wait for a complete line.
+A string decoded from the number of bytes the controller reports as available, or an empty string when no bytes are waiting. This is a current-buffer read, not a wait for a complete line.
 
 ## Usage notes
 
