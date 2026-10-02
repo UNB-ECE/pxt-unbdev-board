@@ -91,6 +91,7 @@ namespace UNBdevBLiXel {
     //% colour.shadow="colorNumberPicker"
     //% blockNamespace=UNBDev subcategory="BLiXel"
     //% weight=100 blockGap=8
+    //% help=github:unbdev-board/docs/reference/blixel/set-all
     export function setAll(colour: number): void {
         colour &= 0xffffff
         selectedColour = colour
@@ -109,6 +110,7 @@ namespace UNBdevBLiXel {
     //% colour.shadow="colorNumberPicker"
     //% blockNamespace=UNBDev subcategory="BLiXel"
     //% weight=90 blockGap=8
+    //% help=github:unbdev-board/docs/reference/blixel/set-pixel
     export function setPixel(index: UNBdevBLiXelIndex, colour: number): void {
         const pixel = Math.clamp(0, PIXEL_COUNT - 1, index)
         colour &= 0xffffff
@@ -127,6 +129,7 @@ namespace UNBdevBLiXel {
     //% block="clear all UNBdev.board BLiXels"
     //% blockNamespace=UNBDev subcategory="BLiXel"
     //% weight=80 blockGap=8
+    //% help=github:unbdev-board/docs/reference/blixel/clear
     export function clear(): void {
         pixels.fill(0)
         selectedColour = UNBdevBLiXelColour.Black
@@ -141,6 +144,7 @@ namespace UNBdevBLiXel {
     //% percent.min=0 percent.max=100 percent.defl=50
     //% blockNamespace=UNBDev subcategory="BLiXel"
     //% weight=70 blockGap=8
+    //% help=github:unbdev-board/docs/reference/blixel/set-brightness
     export function setBrightness(percent: number): void {
         brightness = Math.clamp(0, 255, Math.round(percent * 2.55))
         writeBuffer()
@@ -155,6 +159,7 @@ namespace UNBdevBLiXel {
     //% offset.min=0 offset.max=5 offset.defl=1
     //% blockNamespace=UNBDev subcategory="BLiXel"
     //% weight=60 blockGap=8
+    //% help=github:unbdev-board/docs/reference/blixel/shift
     export function shift(offset: number = 1): void {
         const amount = Math.clamp(0, PIXEL_COUNT, Math.round(offset))
         for (let i = PIXEL_COUNT - 1; i >= 0; i--) {
@@ -170,6 +175,7 @@ namespace UNBdevBLiXel {
     //% offset.min=-5 offset.max=5 offset.defl=1
     //% blockNamespace=UNBDev subcategory="BLiXel"
     //% weight=50 blockGap=8
+    //% help=github:unbdev-board/docs/reference/blixel/rotate
     export function rotate(offset: number = 1): void {
         let amount = Math.round(offset) % PIXEL_COUNT
         if (amount < 0) amount += PIXEL_COUNT
@@ -197,6 +203,7 @@ namespace UNBdevBLiXel {
     //% expandableArgumentMode="toggle"
     //% blockNamespace=UNBDev subcategory="BLiXel"
     //% weight=40 blockGap=8
+    //% help=github:unbdev-board/docs/reference/blixel/show-bar-graph
     export function showBarGraph(value: number, maximum: number,
         minimum: number = 0): void {
         const count = barGraphCount(value, maximum, minimum)
@@ -219,6 +226,7 @@ namespace UNBdevBLiXel {
     //% blueValue.min=0 blueValue.max=255
     //% blockNamespace=UNBDev subcategory="BLiXel"
     //% weight=30
+    //% help=github:unbdev-board/docs/reference/blixel/rgb
     export function rgb(redValue: number, greenValue: number,
         blueValue: number): number {
         return ((redValue & 0xff) << 16) |
@@ -231,6 +239,7 @@ namespace UNBdevBLiXel {
     //% h.min=0 h.max=360 s.min=0 s.max=99 l.min=0 l.max=99
     //% blockNamespace=UNBDev subcategory="BLiXel"
     //% weight=20
+    //% help=github:unbdev-board/docs/reference/blixel/hsl
     export function hsl(h: number, s: number, l: number): number {
         h = ((Math.round(h) % 360) + 360) % 360
         s = Math.clamp(0, 99, Math.round(s))
@@ -257,6 +266,7 @@ namespace UNBdevBLiXel {
     //% block="$colour"
     //% blockNamespace=UNBDev subcategory="BLiXel"
     //% weight=10
+    //% help=github:unbdev-board/docs/reference/blixel/colour
     export function colour(colour: UNBdevBLiXelColour): number {
         return colour
     }

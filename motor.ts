@@ -68,9 +68,9 @@ namespace UNBdevMotor {
 
     /** Enable or disable the integrated motor driver. */
     //% block="motor driver $state"
-    //% help=github:unbdev-board/docs/motors
     //% blockNamespace=UNBDev subcategory="Motors"
     //% weight=100
+    //% help=github:unbdev-board/docs/reference/motors/enable
     export function enable(state: State): void {
         UNBdevBoard.sendData(
             UNBdevBoard.Pin.PWM,
@@ -86,9 +86,9 @@ namespace UNBdevMotor {
     //% block="run $motor motor $direction at $speed %"
     //% speed.min=0 speed.max=100 speed.defl=50
     //% speed.shadow="speedPicker"
-    //% help=github:unbdev-board/docs/motors
     //% blockNamespace=UNBDev subcategory="Motors"
     //% weight=95
+    //% help=github:unbdev-board/docs/reference/motors/run
     export function run(motor: Motor, direction: Direction, speed: number): void {
         send(motor, direction, speed)
     }
@@ -97,9 +97,9 @@ namespace UNBdevMotor {
     //% block="set $motor motor speed to $speed %"
     //% speed.min=-100 speed.max=100 speed.defl=50
     //% speed.shadow="speedPicker"
-    //% help=github:unbdev-board/docs/motors
     //% blockNamespace=UNBDev subcategory="Motors"
     //% weight=90
+    //% help=github:unbdev-board/docs/reference/motors/set-speed
     export function setSpeed(motor: Motor, speed: number): void {
         speed = Math.round(Math.constrain(speed, -100, 100))
         if (speed == 0) send(motor, Direction.Brake, 0)
@@ -111,9 +111,9 @@ namespace UNBdevMotor {
     //% block="set both motor speeds to $speed %"
     //% speed.min=-100 speed.max=100 speed.defl=50
     //% speed.shadow="speedPicker"
-    //% help=github:unbdev-board/docs/motors
     //% blockNamespace=UNBDev subcategory="Motors"
     //% weight=85
+    //% help=github:unbdev-board/docs/reference/motors/set-both-speeds
     export function setBothSpeeds(speed: number): void {
         setSpeed(Motor.Left, speed)
         setSpeed(Motor.Right, speed)
@@ -125,9 +125,9 @@ namespace UNBdevMotor {
     //% speed.shadow="speedPicker"
     //% duration.min=0 duration.defl=1000
     //% duration.shadow="timePicker"
-    //% help=github:unbdev-board/docs/motors
     //% blockNamespace=UNBDev subcategory="Motors"
     //% weight=80
+    //% help=github:unbdev-board/docs/reference/motors/run-for
     export function runFor(motor: Motor, speed: number, duration: number): void {
         setSpeed(motor, speed)
         basic.pause(safeDuration(duration))
@@ -140,9 +140,9 @@ namespace UNBdevMotor {
     //% speed.shadow="speedPicker"
     //% duration.min=0 duration.defl=1000
     //% duration.shadow="timePicker"
-    //% help=github:unbdev-board/docs/motors
     //% blockNamespace=UNBDev subcategory="Motors"
     //% weight=75
+    //% help=github:unbdev-board/docs/reference/motors/run-both-for
     export function runBothFor(speed: number, duration: number): void {
         setBothSpeeds(speed)
         basic.pause(safeDuration(duration))
@@ -151,18 +151,18 @@ namespace UNBdevMotor {
 
     /** Brake one motor. */
     //% block="stop $motor motor"
-    //% help=github:unbdev-board/docs/motors
     //% blockNamespace=UNBDev subcategory="Motors"
     //% weight=70
+    //% help=github:unbdev-board/docs/reference/motors/stop
     export function stop(motor: Motor): void {
         send(motor, Direction.Brake, 0)
     }
 
     /** Brake both motors. */
     //% block="stop all motors"
-    //% help=github:unbdev-board/docs/motors
     //% blockNamespace=UNBDev subcategory="Motors"
     //% weight=65
+    //% help=github:unbdev-board/docs/reference/motors/stop-all
     export function stopAll(): void {
         stop(Motor.Left)
         stop(Motor.Right)
