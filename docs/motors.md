@@ -2,7 +2,7 @@
 
 ## Physical validation and safety boundary
 
-The **Motors** row inside **UNBdev.board** under **Advanced** exposes implemented
+The **Motors** row inside **UNBdev.board** exposes implemented
 extension APIs that are not yet physically validated on UNBdev.board. Do not attach
 or operate motors based on this document. A supported motor workflow first requires
 a hardware contract and physical test record for the board revision, controller
