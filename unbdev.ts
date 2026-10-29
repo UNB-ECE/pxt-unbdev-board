@@ -12,11 +12,15 @@
  * `filterBlocks`). `groups` renders flat section headers inside a flyout, so
  * the two are not interchangeable.
  *
- * No `more` row: public blocks are deliberately assigned only to their
- * feature subcategory. Marking a public block as `advanced=true` also makes
- * MakeCode consider it for its generic "more" grouping. That would make the
- * feature layout less predictable, so advanced transport helpers stay hidden
- * and student blocks stay in their named rows.
+ * `more` row: blocks marked `advanced=true` collect into the generic "more"
+ * row that belongs to this parent namespace, mirroring how Brilliant Labs'
+ * b.Board keeps everyday blocks up front and tucks setup, diagnostics, and
+ * convenience helpers behind `more`. An advanced block must not also carry a
+ * `subcategory`: `partitionBlocks` and `filterBlocks` (webapp/src/blocks.tsx)
+ * match the two attributes independently, so a block with both would render
+ * twice -- once in its feature row and once in `more`. The framework supports
+ * one `more` row per parent namespace, placed alongside the feature rows, so
+ * advanced blocks from every feature share that single row.
  *
  * `subcategoryIcons` supplies the same recognizable microphone, spinner,
  * Wi-Fi, gears, and microchip cues used by b.Board. It is consumed by the

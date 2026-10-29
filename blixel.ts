@@ -224,8 +224,8 @@ namespace UNBdevBLiXel {
     //% redValue.min=0 redValue.max=255
     //% greenValue.min=0 greenValue.max=255
     //% blueValue.min=0 blueValue.max=255
-    //% blockNamespace=UNBDev subcategory="BLiXel"
-    //% weight=30
+    //% blockNamespace=UNBDev
+    //% weight=30 advanced=true
     //% help=github:unbdev-board/docs/reference/blixel/rgb
     export function rgb(redValue: number, greenValue: number,
         blueValue: number): number {
@@ -237,8 +237,8 @@ namespace UNBdevBLiXel {
     //% blockId=UNBdevBLiXel_hsl
     //% block="hue $h saturation $s luminosity $l"
     //% h.min=0 h.max=360 s.min=0 s.max=99 l.min=0 l.max=99
-    //% blockNamespace=UNBDev subcategory="BLiXel"
-    //% weight=20
+    //% blockNamespace=UNBDev
+    //% weight=20 advanced=true
     //% help=github:unbdev-board/docs/reference/blixel/hsl
     export function hsl(h: number, s: number, l: number): number {
         h = ((Math.round(h) % 360) + 360) % 360
@@ -264,8 +264,8 @@ namespace UNBdevBLiXel {
     /** Return a named BLiXel colour. */
     //% blockId=UNBdevBLiXel_colour
     //% block="$colour"
-    //% blockNamespace=UNBDev subcategory="BLiXel"
-    //% weight=10
+    //% blockNamespace=UNBDev
+    //% weight=10 advanced=true
     //% help=github:unbdev-board/docs/reference/blixel/colour
     export function colour(colour: UNBdevBLiXelColour): number {
         return colour

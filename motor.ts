@@ -111,8 +111,8 @@ namespace UNBdevMotor {
     //% block="set both motor speeds to $speed %"
     //% speed.min=-100 speed.max=100 speed.defl=50
     //% speed.shadow="speedPicker"
-    //% blockNamespace=UNBDev subcategory="Motors"
-    //% weight=85
+    //% blockNamespace=UNBDev
+    //% weight=85 advanced=true
     //% help=github:unbdev-board/docs/reference/motors/set-both-speeds
     export function setBothSpeeds(speed: number): void {
         setSpeed(Motor.Left, speed)
@@ -140,8 +140,8 @@ namespace UNBdevMotor {
     //% speed.shadow="speedPicker"
     //% duration.min=0 duration.defl=1000
     //% duration.shadow="timePicker"
-    //% blockNamespace=UNBDev subcategory="Motors"
-    //% weight=75
+    //% blockNamespace=UNBDev
+    //% weight=75 advanced=true
     //% help=github:unbdev-board/docs/reference/motors/run-both-for
     export function runBothFor(speed: number, duration: number): void {
         setBothSpeeds(speed)

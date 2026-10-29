@@ -187,9 +187,9 @@ namespace UNBdevClick {
 
     /** Set the PWM frequency on a Click signal, in hertz. */
     //% block="UNBdev.board set PWM frequency on pin $pin to $frequency Hz on Click $socket"
-    //% blockNamespace=UNBDev subcategory="Control" group="PWM"
+    //% blockNamespace=UNBDev
     //% frequency.defl=1000
-    //% weight=65
+    //% weight=65 advanced=true
     //% help=github:unbdev-board/docs/reference/control/set-pwm-frequency
     export function setPwmFrequency(pin: PwmSignal, frequency: number, socket: Socket): void {
         UNBdevBoard.setPwmFrequency(asPwmPin(pin), frequency,
@@ -228,9 +228,9 @@ namespace UNBdevClick {
 
     /** Set the UART baud rate for a Click socket. */
     //% block="UNBdev.board set UART baud to $baud on Click $socket"
-    //% blockNamespace=UNBDev subcategory="Control" group="UART"
+    //% blockNamespace=UNBDev
     //% baud.defl=115200
-    //% weight=45
+    //% weight=45 advanced=true
     //% help=github:unbdev-board/docs/reference/control/uart-set-baud
     export function uartSetBaud(baud: number, socket: Socket): void {
         UNBdevBoard.uartSetBaud(baud,

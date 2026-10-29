@@ -217,7 +217,7 @@ namespace UNBdevBoardWiFi {
 
     //% blockId=unb_wifi_restart
     //% block="UNBdev.board restart Wi-Fi"
-    //% blockNamespace=UNBDev subcategory="Wi-Fi" weight=70
+    //% blockNamespace=UNBDev weight=70 advanced=true
     //% help=github:unbdev-board/docs/reference/wifi/restart
     export function restart(): boolean {
         connected = false
@@ -229,7 +229,7 @@ namespace UNBdevBoardWiFi {
     /** Query the ESP32 AT firmware identification text (`AT+GMR`). */
     //% blockId=unb_wifi_firmware_version
     //% block="UNBdev.board Wi-Fi firmware version"
-    //% blockNamespace=UNBDev subcategory="Wi-Fi" weight=60
+    //% blockNamespace=UNBDev weight=60 advanced=true
     //% help=github:unbdev-board/docs/reference/wifi/firmware-version
     export function firmwareVersion(): string {
         if (!command("AT+GMR", "OK", 3000)) return ""
@@ -355,7 +355,7 @@ namespace UNBdevBoardWiFi {
 
     //% blockId=unb_wifi_last_error
     //% block="UNBdev.board Wi-Fi last error"
-    //% blockNamespace=UNBDev subcategory="Wi-Fi" weight=40
+    //% blockNamespace=UNBDev weight=40 advanced=true
     //% help=github:unbdev-board/docs/reference/wifi/last-error
     export function lastError(): ErrorCode { return error }
 }

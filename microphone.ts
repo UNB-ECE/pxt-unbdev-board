@@ -54,8 +54,8 @@ namespace UNBdevBoardMic {
     /** Enable or disable the microphone built into UNBdev.board. */
     //% blockId=unbdev_mic_enable
     //% block="UNBdev.board microphone $state"
-    //% blockNamespace=UNBDev subcategory="Microphone"
-    //% weight=60
+    //% blockNamespace=UNBDev
+    //% weight=60 advanced=true
     //% help=github:unbdev-board/docs/reference/microphone/set-enabled
     export function setEnabled(state: State): void {
         setThreshold(currentThreshold)
@@ -66,8 +66,8 @@ namespace UNBdevBoardMic {
     /** Recalculate the microphone's ambient-sound baseline. */
     //% blockId=unbdev_mic_baseline
     //% block="update UNBdev.board microphone baseline"
-    //% blockNamespace=UNBDev subcategory="Microphone"
-    //% weight=50
+    //% blockNamespace=UNBDev
+    //% weight=50 advanced=true
     //% help=github:unbdev-board/docs/reference/microphone/update-baseline
     export function updateBaseline(): void {
         command(MicrophoneFunction.SetBaseline)
@@ -111,8 +111,8 @@ namespace UNBdevBoardMic {
     /** Clear the firmware's microphone threshold flag. */
     //% blockId=unbdev_mic_clear_threshold_flag
     //% block="clear UNBdev.board sound threshold flag"
-    //% blockNamespace=UNBDev subcategory="Microphone"
-    //% weight=30
+    //% blockNamespace=UNBDev
+    //% weight=30 advanced=true
     //% help=github:unbdev-board/docs/reference/microphone/clear-threshold-flag
     export function clearThresholdFlag(): void {
         command(MicrophoneFunction.ClearThresholdFlag)
