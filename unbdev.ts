@@ -26,12 +26,19 @@
  * `BBoard_Control` carries the student-facing Click socket blocks ported from
  * Brilliant Labs' bBoard_Control; see UNB-ECE/unblabs-platform#87.
  *
- * `advanced=true` on the namespace places this entry under the editor's
- * Advanced row, below Extensions, as b.Board does. Its own chevron expands
- * the named feature rows without affecting the rest of the toolbox.
+ * The entry is deliberately not `advanced`. An extension installed through
+ * the Extensions dialog is drawn in the band between the Extensions row and
+ * Advanced (webapp/src/toolbox.tsx, `getNonAdvancedCategories`), which is
+ * where b.Board puts it too, so the namespace must stay non-advanced for the
+ * editor to place it there. `advanced=true` here would move the whole entry
+ * below the Advanced row instead.
+ *
+ * The per-block `advanced=true` attributes are a separate mechanism: they put
+ * helper blocks behind each feature row's `more`, and they work the same
+ * whether or not the namespace is advanced.
  */
 //% color=#9E4894 icon="\uf2db" block="UNBdev.board"
-//% weight=98 advanced=true subcategories='["BBoard_Mic", "BLiXel", "BBoard_WiFi", "BBoard_Control", "BBoard_Motor"]'
+//% weight=98 subcategories='["BBoard_Mic", "BLiXel", "BBoard_WiFi", "BBoard_Control", "BBoard_Motor"]'
 //% subcategoryIcons='{"BBoard_Mic":"\uf130","BLiXel":"\uf110","BBoard_WiFi":"\uf1eb","BBoard_Control":"\uf2db","BBoard_Motor":"\uf085"}'
 namespace UNBDev {
     // Keep namespace metadata available without exposing an extra block.
