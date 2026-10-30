@@ -12,8 +12,9 @@
  * `filterBlocks`). `groups` renders flat section headers inside a flyout, so
  * the two are not interchangeable.
  *
- * The row names and icons follow b.Board so the two editors read the same:
- * `BBoard_Mic`, `BLiXel`, `BBoard_WiFi`, `BBoard_Control` and `BBoard_Motor`.
+ * The feature rows keep b.Board's order and icons, but the names drop the
+ * `BBoard_` prefix its source uses: `Microphone`, `BLiXel`, `WiFi`, `Control`
+ * and `Motor`.
  * A block that is both `advanced=true` and tagged with one of these
  * subcategories goes into a `more` row nested inside that feature row, like
  * each control on code.brilliantlabs.ca. Advanced blocks without a
@@ -23,7 +24,7 @@
  * Wi-Fi, microchip, and gear cues used by b.Board. It is consumed by the
  * pinned UNB PXT framework's nested-category renderer.
  *
- * `BBoard_Control` carries the student-facing Click socket blocks ported from
+ * `Control` carries the student-facing Click socket blocks ported from
  * Brilliant Labs' bBoard_Control; see UNB-ECE/unblabs-platform#87.
  *
  * The entry is deliberately not `advanced`. An extension installed through
@@ -38,8 +39,8 @@
  * whether or not the namespace is advanced.
  */
 //% color=#9E4894 icon="\uf2db" block="UNBdev.board"
-//% weight=98 subcategories='["BBoard_Mic", "BLiXel", "BBoard_WiFi", "BBoard_Control", "BBoard_Motor"]'
-//% subcategoryIcons='{"BBoard_Mic":"\uf130","BLiXel":"\uf110","BBoard_WiFi":"\uf1eb","BBoard_Control":"\uf2db","BBoard_Motor":"\uf085"}'
+//% weight=98 subcategories='["Microphone", "BLiXel", "WiFi", "Control", "Motor"]'
+//% subcategoryIcons='{"Microphone":"\uf130","BLiXel":"\uf110","WiFi":"\uf1eb","Control":"\uf2db","Motor":"\uf085"}'
 namespace UNBDev {
     // Keep namespace metadata available without exposing an extra block.
     //% blockHidden=true
