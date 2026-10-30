@@ -126,7 +126,7 @@ namespace UNBdevClick {
      * output". Writing does not change the direction.
      */
     //% block="UNBdev.board write pin $pin to $value on Click $socket"
-    //% blockNamespace=UNBDev subcategory="BBoard_Control" group="Pins"
+    //% blockNamespace=UNBDev subcategory="Control" group="Pins"
     //% weight=100
     //% help=github:unbdev-board/docs/reference/control/write-pin
     export function writePin(pin: ClickPin, value: number, socket: Socket): void {
@@ -136,7 +136,7 @@ namespace UNBdevClick {
 
     /** Read whether a Click signal is high. */
     //% block="UNBdev.board digital read pin $pin on Click $socket"
-    //% blockNamespace=UNBDev subcategory="BBoard_Control" group="Pins"
+    //% blockNamespace=UNBDev subcategory="Control" group="Pins"
     //% weight=95
     //% help=github:unbdev-board/docs/reference/control/digital-read-pin
     export function digitalReadPin(pin: ClickPin, socket: Socket): number {
@@ -146,7 +146,7 @@ namespace UNBdevClick {
 
     /** Read a Click signal as an analog value. */
     //% block="UNBdev.board read analog pin $pin on Click $socket"
-    //% blockNamespace=UNBDev subcategory="BBoard_Control" group="Pins"
+    //% blockNamespace=UNBDev subcategory="Control" group="Pins"
     //% weight=90
     //% help=github:unbdev-board/docs/reference/control/analog-read-pin
     export function analogReadPin(pin: AnalogSignal, socket: Socket): number {
@@ -156,7 +156,7 @@ namespace UNBdevClick {
 
     /** Choose whether a Click signal is an input or an output. */
     //% block="UNBdev.board set pin $pin to $mode on Click $socket"
-    //% blockNamespace=UNBDev subcategory="BBoard_Control" group="Pins"
+    //% blockNamespace=UNBDev subcategory="Control" group="Pins"
     //% weight=85
     //% help=github:unbdev-board/docs/reference/control/set-pin-mode
     export function setPinMode(pin: ClickPin, mode: PinMode, socket: Socket): void {
@@ -166,7 +166,7 @@ namespace UNBdevClick {
 
     /** Apply a pull resistor to a Click input. */
     //% block="UNBdev.board set pin $pin pull $pull on Click $socket"
-    //% blockNamespace=UNBDev subcategory="BBoard_Control" group="Pins"
+    //% blockNamespace=UNBDev subcategory="Control" group="Pins"
     //% weight=80
     //% help=github:unbdev-board/docs/reference/control/set-pin-pull
     export function setPinPull(pin: ClickPin, pull: PinPull, socket: Socket): void {
@@ -176,7 +176,7 @@ namespace UNBdevClick {
 
     /** Set the PWM duty cycle on a Click signal, as a percentage. */
     //% block="UNBdev.board set PWM on pin $pin to $percent % on Click $socket"
-    //% blockNamespace=UNBDev subcategory="BBoard_Control" group="PWM"
+    //% blockNamespace=UNBDev subcategory="Control" group="PWM"
     //% percent.defl=50
     //% weight=70
     //% help=github:unbdev-board/docs/reference/control/set-pwm-duty
@@ -187,7 +187,7 @@ namespace UNBdevClick {
 
     /** Set the PWM frequency on a Click signal, in hertz. */
     //% block="UNBdev.board set PWM frequency on pin $pin to $frequency Hz on Click $socket"
-    //% blockNamespace=UNBDev subcategory="BBoard_Control" group="PWM" advanced=true
+    //% blockNamespace=UNBDev subcategory="Control" group="PWM" advanced=true
     //% frequency.defl=1000
     //% weight=65
     //% help=github:unbdev-board/docs/reference/control/set-pwm-frequency
@@ -198,7 +198,7 @@ namespace UNBdevClick {
 
     /** Send text out of a Click socket's UART. */
     //% block="UNBdev.board send string $text on Click $socket"
-    //% blockNamespace=UNBDev subcategory="BBoard_Control" group="UART"
+    //% blockNamespace=UNBDev subcategory="Control" group="UART"
     //% weight=60
     //% help=github:unbdev-board/docs/reference/control/uart-send-string
     export function uartSendString(text: string, socket: Socket): void {
@@ -208,7 +208,7 @@ namespace UNBdevClick {
 
     /** Read whatever text is waiting on a Click socket's UART. */
     //% block="UNBdev.board read string on Click $socket"
-    //% blockNamespace=UNBDev subcategory="BBoard_Control" group="UART"
+    //% blockNamespace=UNBDev subcategory="Control" group="UART"
     //% weight=55
     //% help=github:unbdev-board/docs/reference/control/uart-read-string
     export function uartReadString(socket: Socket): string {
@@ -218,7 +218,7 @@ namespace UNBdevClick {
 
     /** Whether a Click socket's UART has data waiting. */
     //% block="UNBdev.board is UART data available on Click $socket"
-    //% blockNamespace=UNBDev subcategory="BBoard_Control" group="UART"
+    //% blockNamespace=UNBDev subcategory="Control" group="UART"
     //% weight=50
     //% help=github:unbdev-board/docs/reference/control/uart-data-available
     export function uartDataAvailable(socket: Socket): boolean {
@@ -228,7 +228,7 @@ namespace UNBdevClick {
 
     /** Set the UART baud rate for a Click socket. */
     //% block="UNBdev.board set UART baud to $baud on Click $socket"
-    //% blockNamespace=UNBDev subcategory="BBoard_Control" group="UART" advanced=true
+    //% blockNamespace=UNBDev subcategory="Control" group="UART" advanced=true
     //% baud.defl=115200
     //% weight=45
     //% help=github:unbdev-board/docs/reference/control/uart-set-baud
