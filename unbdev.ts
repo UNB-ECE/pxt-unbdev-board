@@ -12,26 +12,27 @@
  * `filterBlocks`). `groups` renders flat section headers inside a flyout, so
  * the two are not interchangeable.
  *
- * No `more` row: public blocks are deliberately assigned only to their
- * feature subcategory. Marking a public block as `advanced=true` also makes
- * MakeCode consider it for its generic "more" grouping. That would make the
- * feature layout less predictable, so advanced transport helpers stay hidden
- * and student blocks stay in their named rows.
+ * The row names and icons follow b.Board so the two editors read the same:
+ * `BBoard_Mic`, `BLiXel`, `BBoard_WiFi`, `BBoard_Control` and `BBoard_Motor`.
+ * A block that is both `advanced=true` and tagged with one of these
+ * subcategories goes into a `more` row nested inside that feature row, like
+ * each control on code.brilliantlabs.ca. Advanced blocks without a
+ * subcategory still use the namespace-level `more` row.
  *
  * `subcategoryIcons` supplies the same recognizable microphone, spinner,
- * Wi-Fi, gears, and microchip cues used by b.Board. It is consumed by the
+ * Wi-Fi, microchip, and gear cues used by b.Board. It is consumed by the
  * pinned UNB PXT framework's nested-category renderer.
  *
- * `Control` carries the student-facing Click socket blocks ported from
+ * `BBoard_Control` carries the student-facing Click socket blocks ported from
  * Brilliant Labs' bBoard_Control; see UNB-ECE/unblabs-platform#87.
  *
- * It appears between the editor's Extensions and Advanced rows. Its own
- * chevron expands or collapses the named feature rows without affecting the
- * rest of the toolbox.
+ * `advanced=true` on the namespace places this entry under the editor's
+ * Advanced row, below Extensions, as b.Board does. Its own chevron expands
+ * the named feature rows without affecting the rest of the toolbox.
  */
 //% color=#9E4894 icon="\uf2db" block="UNBdev.board"
-//% weight=98 subcategories='["Microphone", "BLiXel", "Wi-Fi", "Motors", "Control"]'
-//% subcategoryIcons='{"Microphone":"\uf130","BLiXel":"\uf110","Wi-Fi":"\uf1eb","Motors":"\uf085","Control":"\uf2db"}'
+//% weight=98 advanced=true subcategories='["BBoard_Mic", "BLiXel", "BBoard_WiFi", "BBoard_Control", "BBoard_Motor"]'
+//% subcategoryIcons='{"BBoard_Mic":"\uf130","BLiXel":"\uf110","BBoard_WiFi":"\uf1eb","BBoard_Control":"\uf2db","BBoard_Motor":"\uf085"}'
 namespace UNBDev {
     // Keep namespace metadata available without exposing an extra block.
     //% blockHidden=true

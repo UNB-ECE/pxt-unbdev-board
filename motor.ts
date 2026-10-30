@@ -68,7 +68,7 @@ namespace UNBdevMotor {
 
     /** Enable or disable the integrated motor driver. */
     //% block="motor driver $state"
-    //% blockNamespace=UNBDev subcategory="Motors"
+    //% blockNamespace=UNBDev subcategory="BBoard_Motor"
     //% weight=100
     //% help=github:unbdev-board/docs/reference/motors/enable
     export function enable(state: State): void {
@@ -86,7 +86,7 @@ namespace UNBdevMotor {
     //% block="run $motor motor $direction at $speed %"
     //% speed.min=0 speed.max=100 speed.defl=50
     //% speed.shadow="speedPicker"
-    //% blockNamespace=UNBDev subcategory="Motors"
+    //% blockNamespace=UNBDev subcategory="BBoard_Motor"
     //% weight=95
     //% help=github:unbdev-board/docs/reference/motors/run
     export function run(motor: Motor, direction: Direction, speed: number): void {
@@ -97,7 +97,7 @@ namespace UNBdevMotor {
     //% block="set $motor motor speed to $speed %"
     //% speed.min=-100 speed.max=100 speed.defl=50
     //% speed.shadow="speedPicker"
-    //% blockNamespace=UNBDev subcategory="Motors"
+    //% blockNamespace=UNBDev subcategory="BBoard_Motor"
     //% weight=90
     //% help=github:unbdev-board/docs/reference/motors/set-speed
     export function setSpeed(motor: Motor, speed: number): void {
@@ -111,7 +111,7 @@ namespace UNBdevMotor {
     //% block="set both motor speeds to $speed %"
     //% speed.min=-100 speed.max=100 speed.defl=50
     //% speed.shadow="speedPicker"
-    //% blockNamespace=UNBDev subcategory="Motors"
+    //% blockNamespace=UNBDev subcategory="BBoard_Motor"
     //% weight=85
     //% help=github:unbdev-board/docs/reference/motors/set-both-speeds
     export function setBothSpeeds(speed: number): void {
@@ -125,7 +125,7 @@ namespace UNBdevMotor {
     //% speed.shadow="speedPicker"
     //% duration.min=0 duration.defl=1000
     //% duration.shadow="timePicker"
-    //% blockNamespace=UNBDev subcategory="Motors"
+    //% blockNamespace=UNBDev subcategory="BBoard_Motor"
     //% weight=80
     //% help=github:unbdev-board/docs/reference/motors/run-for
     export function runFor(motor: Motor, speed: number, duration: number): void {
@@ -140,7 +140,7 @@ namespace UNBdevMotor {
     //% speed.shadow="speedPicker"
     //% duration.min=0 duration.defl=1000
     //% duration.shadow="timePicker"
-    //% blockNamespace=UNBDev subcategory="Motors"
+    //% blockNamespace=UNBDev subcategory="BBoard_Motor"
     //% weight=75
     //% help=github:unbdev-board/docs/reference/motors/run-both-for
     export function runBothFor(speed: number, duration: number): void {
@@ -151,7 +151,7 @@ namespace UNBdevMotor {
 
     /** Brake one motor. */
     //% block="stop $motor motor"
-    //% blockNamespace=UNBDev subcategory="Motors"
+    //% blockNamespace=UNBDev subcategory="BBoard_Motor"
     //% weight=70
     //% help=github:unbdev-board/docs/reference/motors/stop
     export function stop(motor: Motor): void {
@@ -160,7 +160,7 @@ namespace UNBdevMotor {
 
     /** Brake both motors. */
     //% block="stop all motors"
-    //% blockNamespace=UNBDev subcategory="Motors"
+    //% blockNamespace=UNBDev subcategory="BBoard_Motor" advanced=true
     //% weight=65
     //% help=github:unbdev-board/docs/reference/motors/stop-all
     export function stopAll(): void {
