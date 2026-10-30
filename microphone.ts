@@ -54,7 +54,7 @@ namespace UNBdevBoardMic {
     /** Enable or disable the microphone built into UNBdev.board. */
     //% blockId=unbdev_mic_enable
     //% block="UNBdev.board microphone $state"
-    //% blockNamespace=UNBDev subcategory="Mic"
+    //% blockNamespace=UNBDev subcategory="Microphone"
     //% weight=60
     //% help=github:unbdev-board/docs/reference/microphone/set-enabled
     export function setEnabled(state: State): void {
@@ -66,7 +66,7 @@ namespace UNBdevBoardMic {
     /** Recalculate the microphone's ambient-sound baseline. */
     //% blockId=unbdev_mic_baseline
     //% block="update UNBdev.board microphone baseline"
-    //% blockNamespace=UNBDev subcategory="Mic" advanced=true
+    //% blockNamespace=UNBDev subcategory="Microphone" advanced=true
     //% weight=50
     //% help=github:unbdev-board/docs/reference/microphone/update-baseline
     export function updateBaseline(): void {
@@ -76,7 +76,7 @@ namespace UNBdevBoardMic {
     /** Read the RMS sound level measured by the integrated microphone. */
     //% blockId=unbdev_mic_sound_level
     //% block="UNBdev.board sound level"
-    //% blockNamespace=UNBDev subcategory="Mic"
+    //% blockNamespace=UNBDev subcategory="Microphone"
     //% weight=100
     //% help=github:unbdev-board/docs/reference/microphone/sound-level
     export function soundLevel(): number {
@@ -88,7 +88,7 @@ namespace UNBdevBoardMic {
     //% blockId=unbdev_mic_set_threshold
     //% block="set UNBdev.board sound threshold to $threshold"
     //% threshold.defl=50 threshold.min=1 threshold.max=65535
-    //% blockNamespace=UNBDev subcategory="Mic"
+    //% blockNamespace=UNBDev subcategory="Microphone"
     //% weight=80
     //% help=github:unbdev-board/docs/reference/microphone/set-threshold
     export function setThreshold(threshold: number): void {
@@ -101,7 +101,7 @@ namespace UNBdevBoardMic {
     /** Return true when the firmware's microphone threshold flag is set. */
     //% blockId=unbdev_mic_threshold_flag
     //% block="has UNBdev.board sound threshold been reached?"
-    //% blockNamespace=UNBDev subcategory="Mic"
+    //% blockNamespace=UNBDev subcategory="Microphone"
     //% weight=40
     //% help=github:unbdev-board/docs/reference/microphone/threshold-reached
     export function thresholdReached(): boolean {
@@ -111,7 +111,7 @@ namespace UNBdevBoardMic {
     /** Clear the firmware's microphone threshold flag. */
     //% blockId=unbdev_mic_clear_threshold_flag
     //% block="clear UNBdev.board sound threshold flag"
-    //% blockNamespace=UNBDev subcategory="Mic" advanced=true
+    //% blockNamespace=UNBDev subcategory="Microphone" advanced=true
     //% weight=30
     //% help=github:unbdev-board/docs/reference/microphone/clear-threshold-flag
     export function clearThresholdFlag(): void {
@@ -122,7 +122,7 @@ namespace UNBdevBoardMic {
     //% blockId=unbdev_mic_on_loud_sound
     //% block="on UNBdev.board loud sound"
     //% blockAllowMultiple=0 afterOnStart=true
-    //% blockNamespace=UNBDev subcategory="Mic"
+    //% blockNamespace=UNBDev subcategory="Microphone"
     //% weight=90
     //% help=github:unbdev-board/docs/reference/microphone/on-loud-sound
     export function onLoudSound(handler: () => void): void {

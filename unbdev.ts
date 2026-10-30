@@ -13,8 +13,8 @@
  * the two are not interchangeable.
  *
  * The feature rows keep b.Board's order and icons, but the names drop the
- * `BBoard_` prefix its source uses: `Mic`, `BLiXel`, `WiFi`, `Control` and
- * `Motor`.
+ * `BBoard_` prefix its source uses: `Microphone`, `BLiXel`, `WiFi`, `Control`
+ * and `Motor`.
  * A block that is both `advanced=true` and tagged with one of these
  * subcategories goes into a `more` row nested inside that feature row, like
  * each control on code.brilliantlabs.ca. Advanced blocks without a
@@ -39,8 +39,8 @@
  * whether or not the namespace is advanced.
  */
 //% color=#9E4894 icon="\uf2db" block="UNBdev.board"
-//% weight=98 subcategories='["Mic", "BLiXel", "WiFi", "Control", "Motor"]'
-//% subcategoryIcons='{"Mic":"\uf130","BLiXel":"\uf110","WiFi":"\uf1eb","Control":"\uf2db","Motor":"\uf085"}'
+//% weight=98 subcategories='["Microphone", "BLiXel", "WiFi", "Control", "Motor"]'
+//% subcategoryIcons='{"Microphone":"\uf130","BLiXel":"\uf110","WiFi":"\uf1eb","Control":"\uf2db","Motor":"\uf085"}'
 namespace UNBDev {
     // Keep namespace metadata available without exposing an extra block.
     //% blockHidden=true
