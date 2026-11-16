@@ -83,7 +83,7 @@ namespace UNBdevMotor {
     }
 
     /** Run one motor in an explicit direction at 0-100 percent speed. */
-    //% block="run $motor motor $direction at $speed %"
+    //% block="run $motor motor $direction at $speed \\%"
     //% speed.min=0 speed.max=100 speed.defl=50
     //% speed.shadow="speedPicker"
     //% blockNamespace=UNBDev subcategory="Motor"
@@ -94,7 +94,7 @@ namespace UNBdevMotor {
     }
 
     /** Set one motor using signed speed (-100 backward to 100 forward). */
-    //% block="set $motor motor speed to $speed %"
+    //% block="set $motor motor speed to $speed \\%"
     //% speed.min=-100 speed.max=100 speed.defl=50
     //% speed.shadow="speedPicker"
     //% blockNamespace=UNBDev subcategory="Motor"
@@ -108,7 +108,7 @@ namespace UNBdevMotor {
     }
 
     /** Set both motors using signed speed (-100 backward to 100 forward). */
-    //% block="set both motor speeds to $speed %"
+    //% block="set both motor speeds to $speed \\%"
     //% speed.min=-100 speed.max=100 speed.defl=50
     //% speed.shadow="speedPicker"
     //% blockNamespace=UNBDev subcategory="Motor"
@@ -120,7 +120,7 @@ namespace UNBdevMotor {
     }
 
     /** Run one motor for a duration, then brake it. */
-    //% block="run $motor motor at $speed % for $duration ms"
+    //% block="run $motor motor at $speed \\% for $duration ms"
     //% speed.min=-100 speed.max=100 speed.defl=50
     //% speed.shadow="speedPicker"
     //% duration.min=0 duration.defl=1000
@@ -135,7 +135,7 @@ namespace UNBdevMotor {
     }
 
     /** Run both motors for a duration, then brake both. */
-    //% block="run both motors at $speed % for $duration ms"
+    //% block="run both motors at $speed \\% for $duration ms"
     //% speed.min=-100 speed.max=100 speed.defl=50
     //% speed.shadow="speedPicker"
     //% duration.min=0 duration.defl=1000
