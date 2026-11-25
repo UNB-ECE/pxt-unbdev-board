@@ -82,4 +82,4 @@ Explorer at `https://code.brilliantlabs.ca/#editor` on 23 September 2026, as
 directed by the project supervisor. The public Brilliant Labs
 `pxt-bboard-v2` repository contains an earlier `libs/core/bBoard.ts` and an MIT
 licence, but the deployed browser source is newer and is therefore recorded
-separately. See `THIRD_PARTY_NOTICES.md`.
+separately. The upstream b.Board source is MIT-licensed.

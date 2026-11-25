@@ -71,5 +71,4 @@ The behavioral baseline is the deployed Brilliant Labs MakeCode target's
 browser-exposed `core/bBoardWiFi.ts`, inspected 2026-09-24. It uses ESP-AT over
 `bBoard_Control` UART and locally constructs MQTT packets. This implementation
 was reorganized around the shared UNBdev.board control layer and the safety
-constraints above. See `THIRD_PARTY_NOTICES.md` for attribution and the
-upstream MIT notice.
+constraints above. The upstream b.Board source is MIT-licensed.

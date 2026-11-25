@@ -45,5 +45,4 @@ and `2` (backward).
 Intentional differences are UNBdev.board names, explicit public stop and
 direction APIs, input clamping, and synchronous timed blocks. The upstream
 implementation starts its timers in background fibers, which can make a timed
-call return before the motor stops. See `THIRD_PARTY_NOTICES.md` for attribution
-and licence information.
+call return before the motor stops. The upstream b.Board source is MIT-licensed.
