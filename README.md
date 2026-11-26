@@ -80,6 +80,11 @@ See [the protocol baseline](docs/protocol.md) and
 Wi-Fi/MQTT scope, credential safety, limitations, and its remaining firmware
 and hardware acceptance gate are in [the Wi-Fi guide](docs/wifi-mqtt.md).
 
+For authors creating a new sensor or actuator extension for the board, see
+[the extension development guide](docs/sensor-extension-development-guide.md):
+repository layout, manifest, block annotations, validation evidence, release,
+and Extension Manager publication.
+
 ## Planned migration order
 
 1. Control and protocol foundation
